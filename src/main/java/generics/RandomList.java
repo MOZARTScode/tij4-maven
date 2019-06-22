@@ -3,7 +3,7 @@ import java.util.*;
 
 public class RandomList<T> {
   private ArrayList<T> storage = new ArrayList<T>();
-  private Random rand = new Random(47);
+  private Random rand = new Random();
   public void add(T item) { storage.add(item); }
   public T select() {
     return storage.get(rand.nextInt(storage.size()));
