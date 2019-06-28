@@ -2,11 +2,11 @@ package generics;
 
 import java.util.Iterator;
 
-public class G7IterableFibonacci implements Iterable<Integer>{
+public class G07IterableFibonacci implements Iterable<Integer>{
 	private int n;
 	private Fibonacci fibonacci = new Fibonacci();
 
-	public G7IterableFibonacci(int count) { n = count; }
+	public G07IterableFibonacci(int count) { n = count; }
 	
 	public Iterator<Integer> iterator() {
 		return new Iterator<Integer>() {
@@ -22,7 +22,7 @@ public class G7IterableFibonacci implements Iterable<Integer>{
 	}
 	
 	public static void main(String[] args) {
-		for (int i : new G7IterableFibonacci(10))
+		for (int i : new G07IterableFibonacci(10))
 			System.out.println(i + " ");
 	}
 }

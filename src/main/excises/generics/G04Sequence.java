@@ -10,12 +10,12 @@ interface Selector<T> {
 
 // 这里其实使用泛型和使用Object的对象的效果一致
 // 因为并没有使用到T对象里面的方法，泛型在这里实质上就和Object一样
-public class G4Sequence<T> {
+public class G04Sequence<T> {
 	private T[] items;
 	private int next = 0;
 
 	@SuppressWarnings("unchecked")
-	public G4Sequence(int size) { items = (T[]) new Object[size]; }
+	public G04Sequence(int size) { items = (T[]) new Object[size]; }
 
 	public void add(T x) {
 		if (next < items.length)
@@ -44,7 +44,7 @@ public class G4Sequence<T> {
 	}
 
 	public static void main(String[] args) {
-		G4Sequence<String> g4Sequence = new G4Sequence<String>(4);
+		G04Sequence<String> g4Sequence = new G04Sequence<String>(4);
 		g4Sequence.add("lzy");
 		g4Sequence.add("wlx");
 		g4Sequence.add("czx");

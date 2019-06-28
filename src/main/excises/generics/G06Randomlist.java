@@ -1,6 +1,6 @@
 package generics;
 
-public class G6Randomlist {
+public class G06Randomlist {
 
 	public static void main(String[] args) {
 		RandomList<Integer> r1 = new RandomList<Integer>();

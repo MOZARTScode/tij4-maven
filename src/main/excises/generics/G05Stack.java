@@ -1,6 +1,6 @@
 package generics;
 
-public class G5Stack<T> {
+public class G05Stack<T> {
 	
 	private class Node {
 		T item;

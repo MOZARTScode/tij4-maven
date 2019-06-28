@@ -1,8 +1,12 @@
 package generics;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.Random;
 
+import generics.coffee.Coffee;
+import generics.coffee.CoffeeGenerator;
 import net.mindview.util.Generator;
 
 class StoryCharacter {
@@ -43,14 +47,14 @@ class BadGuy extends StoryCharacter {
 	}
 }
 
-public class G8StoryCharacterGenerator 
+public class G08StoryCharacterGenerator 
 implements Generator<StoryCharacter>, Iterable<StoryCharacter>{
 	private Class<?>[] types = { GoodGuy.class, BadGuy.class };
 	private static Random random = new Random();
 	private int size;
 	
-	public G8StoryCharacterGenerator() {	}
-	public G8StoryCharacterGenerator(int sz) { size = sz; };
+	public G08StoryCharacterGenerator() {	}
+	public G08StoryCharacterGenerator(int sz) { size = sz; };
 	
 	public StoryCharacter next() {
 		try {
@@ -69,7 +73,7 @@ implements Generator<StoryCharacter>, Iterable<StoryCharacter>{
 
 		public StoryCharacter next() {
 			count--;
-			return G8StoryCharacterGenerator.this.next();
+			return G08StoryCharacterGenerator.this.next();
 		}
 	}
 	
@@ -78,11 +82,13 @@ implements Generator<StoryCharacter>, Iterable<StoryCharacter>{
 	}
 	
 	public static void main(String[] args) {
-		G8StoryCharacterGenerator gen = new G8StoryCharacterGenerator();
+		G08StoryCharacterGenerator gen = new G08StoryCharacterGenerator();
 		for (int i = 0; i < 5; i++)
 			System.out.println(gen.next());
 		System.out.println("------------------");
-		for (StoryCharacter storyCharacter : new G8StoryCharacterGenerator(8))
+		for (StoryCharacter storyCharacter : new G08StoryCharacterGenerator(8))
 			System.out.println(storyCharacter);
+		
+		Collection<Coffee> c = Generators.fill(new ArrayList<Coffee>(), new CoffeeGenerator(), 5);
 	}
 }

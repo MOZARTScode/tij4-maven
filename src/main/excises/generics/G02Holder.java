@@ -1,11 +1,11 @@
 package generics;
 
-public class G2Holder<T> {
+public class G02Holder<T> {
 	private T a;
 	private T b;
 	private T c;
 
-	public G2Holder(T a, T b, T c) {
+	public G02Holder(T a, T b, T c) {
 		super();
 		this.a = a;
 		this.b = b;
@@ -42,7 +42,7 @@ public class G2Holder<T> {
 	}
 	
 	public static void main(String[] args) {
-		G2Holder<String> g2Holder = new G2Holder<String>
+		G02Holder<String> g2Holder = new G02Holder<String>
 		("lzy", "lyj", "wwd");
 		System.out.println(g2Holder.toString());
 	}
